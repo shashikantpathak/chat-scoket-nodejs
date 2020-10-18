@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" src="./css/login.css" />
+
+
+</head>
+
+<body>
+
+
+    <div id="main">
+        <div class="main">
+            <form action="/login" method="post">
+
+                <h1>
+                    Login
+                </h1>
+                <% if(hasErrors){ %>
+                    <div>
+                        <% _.forEach(messages,function(error){%>
+                            <%=error%>
+                                <%})%>
+
+                    </div>
+                    <% }%>
+                        <div class="inset">
+
+                            <p>
+                                <label for="email">EMAIL ADDRESS</label>
+                                <input type="text" name="email" placeholder="" />
+                            </p>
+                            <p>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" name="password" placeholder="" />
+                            </p>
+
+                        </div>
+
+                        <p class="p-container">
+                            <span><a href="/signup">SignUp</a></span>
+                            <input type="submit" class="login-log" style=" background: #3bb5ec; border: #3bb5ec;" value="Login">
+                        </p>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
